@@ -8,7 +8,7 @@ async function main() {
     
     let $ = cheerio.load(data)
 
-    let text = $('a').text()
+    let text = $('div.container.bg-secondary > p.text-warning').text()
    
     console.log(text)
 }
