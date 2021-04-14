@@ -6,8 +6,11 @@ async function main() {
     let {data} = await axios.get('https://web-scraper-tutorial.netlify.app/')
 
     
+    let $ = cheerio.load(data)
 
-    console.log(data)
+    let text = $('a').text()
+   
+    console.log(text)
 }
 
 
